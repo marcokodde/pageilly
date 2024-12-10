@@ -1,0 +1,401 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Illy Vending</title>
+    
+    <link rel="stylesheet" href="./src/tailwind-output.css">
+
+    <title>Illi Vending</title>
+    
+  </head>
+  <body>
+<div class="fixed top-0 left-0 z-20 w-full bg-white shadow-md">
+    <div class="flex items-center justify-between p-0">
+        <div class="flex items-center space-x-2">
+            <img src="./assets/images/logo_prepango.png" alt="Logo Prepango" class="h-8">
+            <img src="./assets/images/logo_illy.png" alt="Logo Illy" class="h-8">
+        </div>
+        <button type="button" class="px-3 py-2 text-sm font-semibold text-black shadow-sm bg-primary-red hover:bg-secondary-red focus:outline-none">
+            Get In Touch
+        </button>
+    </div>
+</div>
+<div id="navbar" class="fixed top-[34px] left-0 right-0 bg-med_beige py-4 px-6 shadow-md transition-all duration-300 ease-in-out z-20 hidden-navbar">
+    <nav class="flex space-x-6 justify-left md:justify-center">
+               <a href="#prepango-program" class="font-bold nav-item" onclick="selectNavItem(event)">The Prepango Program</a>
+            <a href="#prepango-experience" class="nav-item" onclick="selectNavItem(event)">The Illy Experience</a>
+            <a href="#prepango-machine" class="nav-item" onclick="selectNavItem(event)">Machine Details</a>
+            <a href="#prepango-new" class="nav-item" onclick="selectNavItem(event)">New!</a>
+            <a href="#" class="nav-item" onclick="selectNavItem(event)">Get In Touch</a>
+    </nav>
+</div>
+
+
+<div class="relative !mt-0">
+    <button id="leftArrow" class="arrow left hidden-arrows text-dark_beige hover:text-dark_brown hover:border-dark_brown" onclick="scrollNav(-200)">
+        <svg class="sm:block hidden-arrows" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+    </button>
+    <div class="flex justify-center">
+        <img src="./assets/images/program/machine_1.png" alt="Coffee Machine" class="w-full h-auto lg:h-[837px] object-cover shadow-md">
+    </div>
+
+    <div id="navBar" class="w-full px-6 py-4 overflow-x-auto bg-med_beige nav-bar scrollbar-hide"  onscroll="toggleArrows()">
+        <nav class="flex space-x-6 justify-left md:justify-center">
+            <a href="#prepango-program" class="font-bold nav-item" onclick="selectNavItem(event)">The Prepango Program</a>
+            <a href="#prepango-experience" class="nav-item" onclick="selectNavItem(event)">The Illy Experience</a>
+            <a href="#prepango-machine" class="nav-item" onclick="selectNavItem(event)">Machine Details</a>
+            <a href="#prepango-new" class="nav-item" onclick="selectNavItem(event)">New!</a>
+            <a href="#" class="nav-item" onclick="selectNavItem(event)">Get In Touch</a>
+        </nav>
+    </div>
+
+    <button id="rightArrow" class="arrow right hidden-arrows text-dark_beige hover:text-dark_brown hover:border-dark_brown" onclick="scrollNav(200)">
+        <svg class="sm:block hidden-arrows" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+    </button>
+</div>
+
+<button type="button" data-twe-ripple-init data-twe-ripple-color="light" class="!fixed bottom-5 end-5 hidden rounded-full bg-dark_brown p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-med_brown hover:shadow-lg focus:bg-med_brown focus:shadow-lg focus:outline-none focus:ring-0 active:bg-dark_brown active:shadow-lg" id="btn-back-to-top">
+    <span class="[&>svg]:w-4">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+        </svg>
+    </span>
+    </button>
+
+
+    <div id="prepango-program" class="min-h-screen">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 gap-4 mt-6 sm:grid-cols-2">
+            <div class="flex flex-col items-center justify-center p-4 text-left">
+                <p class="mt-4 text-gray-600 desktop_body_txt">
+                    illy Caffè North America and Prepango, a national operator of specialty vending machines, have partnered to introduce an innovative automated espresso coffee concept—marking the first of its kind for both illy and Prepango in the USA.
+                </p>
+                <p class="mt-4 text-gray-600 desktop_body_txt">
+                    Unlike traditional coffee vending machines that serve instant coffee, our machines grind, brew, and serve illy’s signature blend of
+                    <span class="text-red-500">100% Arabica</span> whole beans sourced from around the world, delivering a premium coffee experience.
+                </p>
+            </div>
+            <div class="flex justify-center order-2 p-4 sm:order-1">
+                <img src="./assets/images/program/satisfaction_2.png" alt="Coffee Machine" class="object-cover w-full h-64 md:h-80 lg:h-96">
+            </div>
+        </div>
+        <div class="Frame1307814355 w-[390px] h-[296px] px-10 py-[62px] bg-gradient-to-tl from-[#311001] via-[#5e2e0f] to-[#d19236] flex-col justify-center items-center gap-10 inline-flex">
+            <div class="Group14602 w-[342px] h-24 relative">
+              <div class="TreatYourPeopleToToday w-[342px] left-0 top-0 absolute text-center text-white text-[32px] font-semibold leading-[48px]">Treat your people     to         today</div>
+            </div>
+            <div class="Button self-stretch h-14 px-4 py-2.5 bg-[#d12420] rounded-[35px] shadow justify-center items-center gap-2 inline-flex">
+                <button type="button" id="btn-get-in-touch" class="p-3 text-xs font-medium leading-tight text-white uppercase transition duration-150 ease-in-out rounded-full shadow-md bottom-5 left-5 bg-primary-red hover:bg-secondary-red hover:shadow-lg focus:bg-secondary-red focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-red active:shadow-lg">
+                    Get in Touch
+                </button>
+            </div>
+        </div>
+        <div class="flex justify-center p-4">
+            <img src="./assets/images/program/satisfaction_1.png" alt="Coffee Machine" class="object-cover w-full h-64 md:h-80 lg:h-96">
+        </div>
+        <div class="grid justify-center grid-cols-3 gap-4 mt-6 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+            <div class="flex flex-col items-center">
+                <i class="fa fa-plane fa-3x text-primary-red"></i>
+                <p class="mt-2 text-center text-gray-600">Airport</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fa fa-graduation-cap fa-3x text-primary-red"></i>
+                <p class="mt-2 text-center text-gray-600">Apartments and Condos</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fa fa-building fa-3x text-primary-red"></i>
+                <p class="mt-2 text-center text-gray-600">Colleges and Universities</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fa fa-car-side fa-3x text-primary-red"></i>
+                <p class="mt-2 text-center text-gray-600">Auto Dealerships</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fa fa-users fa-3x text-primary-red"></i>
+                <p class="mt-2 text-center text-gray-600">Campus Hubs</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fa fa-school-flag fa-3x text-primary-red"></i>
+                <p class="mt-2 text-center text-gray-600">Clubs and Clubhouses</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fa fa-house-laptop fa-3x text-primary-red"></i>
+                <p class="mt-2 text-center text-gray-600">Corporate Offices</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fa fa-couch fa-3x text-primary-red"></i>
+                <p class="mt-2 text-center text-gray-600">Faculty Lounges</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fa fa-building-columns fa-3x text-primary-red"></i>
+                <p class="mt-2 text-center text-gray-600">Government Offices</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fa fa-hospital fa-3x text-primary-red"></i>
+                <p class="mt-2 text-center text-gray-600">Hospital</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fa fa-gavel fa-3x text-primary-red"></i>
+                <p class="mt-2 text-center text-gray-600">Law Office</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fa fa-basket-shopping fa-3x text-primary-red"></i>
+                <p class="mt-2 text-center text-gray-600">Shopping Malls</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fa fa-train fa-3x text-primary-red"></i>
+                <p class="mt-2 text-center text-gray-600">Mass Transit Stations</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fa fa-masks-theater fa-3x text-primary-red"></i>
+                <p class="mt-2 text-center text-gray-600">Stadiums, Suites, and Arenas</p>
+            </div>
+        </div>
+        <!-- Partnerships Section -->
+        <div class="mb-8 text-center">
+            <h2 class="text-2xl font-semibold text-gray-800">Check Out Some of Our Airport Partnerships:</h2>
+            <div class="flex flex-wrap justify-center gap-4 mt-6">
+                <!-- Logos for partnerships -->
+                <img src="./assets/images/program/clients.png"  class="w-full h-auto">
+
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4 mt-6 sm:grid-cols-2">
+            <!-- Columna de Imágenes en dos filas -->
+            <div class="flex flex-col justify-center p-4 space-y-4">
+                <img src="./assets/images/program/satisfaction_1.png" alt="Coffee Machine" class="object-cover w-full h-34 md:h-50 lg:h-20">
+                <img src="./assets/images/program/satisfaction_2.png" alt="Coffee Machine" class="object-cover w-full h-34 md:h-50 lg:h-20">
+            </div>
+
+            <!-- Columna de Texto -->
+            <div class="p-6 text-center">
+                <h2 class="text-2xl font-semibold text-gray-800">Partnering with us is as simple as</h2>
+                <ul class="max-w-md mx-auto mt-4 text-left list-disc list-inside">
+                    <li>Connect and install our machines at your location.</li>
+                    <li>Benefit from our full support, including servicing, maintenance, and restocking.</li>
+                    <li>Enjoy continuous customer engagement and satisfaction.</li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="prepango-experience" class="min-h-screen bg-golden">
+        <div class="container py-4 mx-auto">
+            <div class="mb-8 text-center">
+                <div class="flex justify-center p-2 mt-4">
+                    <img src="./assets/images/experience/label_illy.png" class="hidden lg:block" alt="label">
+                    <img src="./assets/images/experience/label_illy_mobile.png" class="block lg:hidden" alt="label">
+                </div>
+            </div>
+            <div class="grid grid-cols-1 gap-4 mt-2 sm:grid-cols-2" style="background: #F6F0EB">
+
+                <div class="flex flex-col text-left">
+                    <h1 class="header_experience_red">
+                        THE DIRECT TRADE MODEL
+                    </h1>
+                    <p class="mt-4 mb-1 text-lg text-gray-700">
+                        Every single bean we harvest is 100% traceable to the source. We purchase our coffee directly from more than 800 growers, paying on average 30% more for the highest-quality Arabica beans. We possess a 100% sustainable supply chain.
+                    </p>
+                    <br><br>
+                    <h1 class="header_experience_red">
+                        UNIVERSITY OF COFFEE
+                    </h1>
+                    <p class="mt-4 mb-1 text-lg text-gray-700">
+                        We prioritize environmentally conscious practices. The establishment of the University of Coffee, ultra-low emission coffee roasting plants, and partnerships with universities to research sustainable coffee production. We pursue sustainability by sharing the value it generates (economic sustainability), personal growth (social sustainability) and respect for the ecosystem (environmental sustainability)
+                    </p>
+                </div>
+                
+                <div class="flex justify-center">
+                    <img src="./assets/images/experience/image_illy_one.png" alt="Coffee" style="width: 668px;  height: 648px;" class="hidden object-cover lg:block">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2" style="background: #F6F0EB">
+                <div class="flex justify-center">
+                    <img src="./assets/images/experience/image_illy_two.png" alt="Coffee" style="width: 658px;  height: 638px;" class="object-cover">
+                </div>
+
+                <div class="flex flex-col text-left">
+                    <br><br><br><br>
+                    <h1 class="uppercase header_experience_red">
+                        Our Goal is to Delight Coffee Lovers
+                    </h1>
+                    <p class="mt-4 mb-1 text-lg text-gray-700">
+                        Illy aims to be the reference standard for coffee excellence and culture worldwide, an innovative company that offers the best products and places to enjoy them, and thanks to this grows and becomes a leader in high-end coffee.
+                    </p>
+                    <br><br>
+                    <p class="uppercase header_experience_red">
+                        We are serious about sustainability
+                    </p>
+                    <p class="mt-4 mb-1 text-lg text-gray-700">
+                        Illy has been carbon neutral since 2023 after creating the “One Makes the Difference” initiative to demonstrate how sustainable quality helps protect and improve the well being of the planet. It reminds consumers that everyone’s actions can make a difference.
+                    </p>
+                    <br>
+                    <div class="flex justify-center">
+                        <img src="./assets/images/experience/image_illy_one.png" alt="Coffee" style="width: 668px;  height: 648px;" class="block object-cover lg:hidden">
+                    </div>
+                    <br>
+                    <button type="submit" class="hidden w-full p-2 mx-auto font-bold text-white bg-red-600 rounded-full lg:block"> Get In Touch</button>
+                </div>
+                <button type="submit" class="block w-3/4 p-2 mx-auto font-bold text-white bg-red-600 rounded-full lg:hidden"> Get In Touch</button>
+
+            </div>
+            
+            <div class="flex justify-center hidden mt-2 lg:block">
+                <img src="./assets/images/experience/image_illy_3.png" alt="Coffee Illy" style="width: 1440px; height: 1150px;" class="object-cover shadow-md">
+            </div>
+           
+            
+            <div class="grid grid-cols-1 gap-4 mt-2 sm:grid-cols-2">
+                
+                <div class="mb-2">
+                    <img src="./assets/images/experience/image_red.png" alt="" class="block object-cover lg:hidden">
+                </div>
+                <div class="mb-2">
+                    <img src="./assets/images/experience/image_white.png" alt="" class="block object-cover w-full lg:hidden lg:w-3/4">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="prepango-new" class="min-h-screen bg-white">
+        <div class="container py-4 mx-auto">
+            <div class="grid grid-cols-1 gap-4 mt-2 lg:grid-cols-3">
+                <div class="flex justify-center">
+                </div>
+                <div class="flex col-span-2">
+                    <span class="top-2 header_black_new">
+                        The New Cold Brew Vending Machine
+                    </span>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 gap-4 mt-2 lg:grid-cols-3">
+
+                <div class="flex justify-center">
+                    <img src="./assets/images/new/machine_new.png" 
+                         class="hidden w-[260px] h-[479px] lg:block" 
+                         alt="Coffee">
+                </div>
+            
+                <div class="flex flex-col justify-center">
+                    <p class="label_new">
+                        These ready to drink beverages are expertly crafted to offer coffee lovers a refreshing way to enjoy coffee anywhere they want it. The unit features all three illy cold brew varieties in convenient, on-the-go, 8.5oz slim cans. Pick from a wide selection of espresso beverages, delivered quickly and conveniently.
+                    </p>
+                    <p class="hidden label_new lg:block">
+                        This machine features a modern visual display, 9” color touchscreen and full motion video. It offers product information, integrated cashless payment, multi-product purchases from a single transaction and digital advertising.
+                    </p>
+                </div>
+            
+                <div class="flex flex-col items-center">
+                    <div class="mb-2">
+                        <img src="./assets/images/new/machine_spaces_new.png" 
+                             class="hidden w-full h-full lg:block" 
+                             alt="">
+                    </div>
+                    <br><br><br>
+                    <div class="mt-4 mb-2">
+                        <img src="./assets/images/new/electrical_new.png"
+                            class="hidden w-full h-full lg:block"
+                            alt="">
+                        <img src="./assets/images/new/image_new_mobile.png" 
+                             class="block object-cover lg:hidden" 
+                             alt="Coffee">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4 mt-4 bg-white sm:grid-cols-3 ">
+                <div class="grid grid-cols-1 mt-1">
+                    <img src="./assets/images/new/card_one.png" alt="" class="object-cover w-1/4 h-auto mx-auto lg:w-full lg:h-full">
+                </div>
+                <div class="grid grid-cols-1 mt-1">
+                    <img src="./assets/images/new/card_two.png" alt="" class="object-cover w-1/4 h-auto mx-auto lg:w-full lg:h-full">
+                </div>
+                <div class="grid grid-cols-1 mt-1">
+                    <img src="./assets/images/new/card_three.png" alt="" class="object-cover w-1/4 h-auto mx-auto lg:w-full lg:h-full">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function selectNavItem(event) {
+          const targetText = event.currentTarget.innerText;
+          const targetHref = event.currentTarget.getAttribute("href");
+      
+          document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('font-bold'));
+          document.querySelectorAll('.nav-item').forEach(item => {
+              if (item.innerText === targetText || item.getAttribute("href") === targetHref) {
+                  item.classList.add('font-bold');
+              }
+          });
+      }
+
+        function scrollNav(distance) {
+            const navBar = document.getElementById('navBar');
+            navBar.scrollBy({ left: distance, behavior: 'smooth' });
+        }
+    
+        function toggleArrows() {
+            const navBar = document.getElementById('navBar');
+            const leftArrow = document.getElementById('leftArrow');
+            const rightArrow = document.getElementById('rightArrow');
+    
+            if (navBar.scrollWidth > navBar.clientWidth) {
+                leftArrow.classList.toggle('hidden-arrows', navBar.scrollLeft === 0);
+                rightArrow.classList.toggle('hidden-arrows', navBar.scrollLeft + navBar.clientWidth >= navBar.scrollWidth);
+            } else {
+                leftArrow.classList.add('hidden-arrows');
+                rightArrow.classList.add('hidden-arrows');
+            }
+        }
+    
+        function scrollFunction() {
+            const backToTopButton = document.getElementById("btn-back-to-top");
+            const getInTouchButton = document.getElementById("btn-get-in-touch");
+    
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.classList.remove("hidden");
+                getInTouchButton.classList.remove("hidden");
+            } else {
+                backToTopButton.classList.add("hidden");
+                getInTouchButton.classList.add("hidden");
+            }
+        }
+    
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    
+        function handleGetInTouch() {
+    
+            alert("Redirigir a sección de contacto o abrir modal.");
+        }
+        
+        window.addEventListener("scroll", function() {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > 800) {
+            navbar.classList.remove("hidden-navbar");
+        } else {
+            navbar.classList.add("hidden-navbar");
+            navbar.classList.remove("scrolled");
+        }
+    });
+
+        document.getElementById("btn-back-to-top").addEventListener("click", scrollToTop);
+        window.addEventListener("scroll", scrollFunction);
+        window.addEventListener("load", toggleArrows);
+        window.addEventListener("resize", toggleArrows);
+    </script>
+    <script src="./renderer.js"></script>
+  </body>
+</html>
